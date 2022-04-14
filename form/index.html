@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Page</title>
+
+		<!--Favicon Link-->
+		<link rel="icon" href="favicon.ico" />
+		<link rel="stylesheet" href="../normalize.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+		/>
+		<link rel="stylesheet" href="../css/styles.css" />
+	</head>
+	<body class="form">
+		<header>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about/index.html">About</a></li>
+					<li><a href="../form/index.html">Form</a></li>
+					<li><a href="https://www.google.com/">Google</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h1>Form</h1>
+
+		<div class="container">
+			<form>
+				<div class="wrapper">
+					<div class="box">
+						<input type="text" name="fname" id="fname" required />
+						<label for="fname">First Name</label>
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<div class="box">
+						<input type="text" name="lname" id="lname" required />
+						<label for="lname">Last name</label>
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<div class="box">
+						<input type="text" name="tel" id="tel" required />
+						<label for="email">E-mail</label>
+					</div>
+				</div>
+				<div class="wrapper">
+					<div class="box">
+						<input type="text" name="tel" id="tel" required />
+						<label for="tel">Telephone</label>
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<div class="box">
+						<textarea id="mes" required></textarea>
+						<label for="mes">Interested in Spam Emails?</label>
+					</div>
+				</div>
+
+				<input type="submit" name="" value="Recepient..." />
+			</form>
+		</div>
+
+		<form id="form">
+			<p id="form-prompt">How old are you?</p>
+			<input type="radio" id="child" name="age" value="child" />
+			<label for="child">17 years or younger</label><br />
+			<input type="radio" id="adult" name="age" value="adult" />
+			<label for="adult">18 - 64 years</label><br />
+			<input type="radio" id="senior" name="age" value="senior" />
+			<label for="senior">65 years or older</label>
+
+			<div id="sub"><button type="submit">Submit</button></div>
+		</form>
+
+		<img src="../images/IMG-1025.jpg" alt="A Lady Hiking" />
+		<p>
+			<img class="plant" src="../images/Cactus.svg" alt="Cactus" />
+		</p>
+
+		<script type="text/javascript">
+			var form = document.getElementById("form");
+			form.addEventListener("submit", showMessage);
+
+			function showMessage(event) {
+				alert(
+					"Your response has been recorded. (Not actually, this is just a demo!)"
+				);
+				event.preventDefault();
+			}
+		</script>
+	</body>
+</html>
